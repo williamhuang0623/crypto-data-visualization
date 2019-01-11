@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <title>Analysis Inputs - PRSM</title>
+    <style>
+        button {
+            float: right;
+        }
+        #input-container {
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 1em 1em 1em;
+        }
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Input Fields for Algorithm</h1>
+    <div id="input-container">
+        <form>
+            <select name="selectCoin" id="selectCoin">
+                <option value="BTC">BTC</option>
+                <option value="ETH">ETH</option>
+                <option value="LTC">LTC</option>
+                <option value="ADA">ADA</option>
+                <option value="XRP">XRP</option>
+                <option value="EOS">EOS</option>
+                <option value="BCH">BCH</option>
+                <option value="XLM">XLM</option>
+                <option value="NEO">NEO</option>
+                <option value="IOT">IOT</option>
+            </select>
+            <label>
+                <p>Technology:</p>
+                <input type="number" name="technology" placeholder="1-10">
+            </label>
+            <label>
+                <p>Maturity:</p>
+                <input type="number" name="maturity" placeholder="1-10">
+            </label>
+            <label>
+                <p>Branding </p>
+                <input type="number" name="branding" placeholder="1-10">
+            </label>
+            <label>
+                <p>Exchange</p>
+                <input type="number" name="exchange" placeholder="1-10">
+            </label>
+            <button id="submit">SUBMIT</button>
+        </form>
+        <a href="../index.html"><button>Home Page</button></a>
+    </div>
+</body>
+<script src="../public/js/input.js"></script>
+<script>
+    $(document).ready(()=> {
+        $("#submit").on("click", ()=> {
+
+            //Input values
+            let coin = document.getElementById("selectCoin").value;
+            let technology = $("input[name='technology']")[0].value;
+            let maturity = $("input[name='maturity']")[0].value;
+            let branding = $("input[name='branding']")[0].value;
+            let exchange = $("input[name='exchange']")[0].value;
+
+            //Do something with input values
+            console.log(technology);
+            updateCryptoValues(coin, technology, maturity, branding, exchange);
+
+            //Return false to prevent default submit (no php form)
+            return false;
+        })
+    })
+</script>
+</html>

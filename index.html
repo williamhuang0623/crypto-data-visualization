@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+<link href="public/css/main.css" type="text/css" rel="stylesheet">
+<body>
+<h1>Welcome to PRSM</h1>
+<h3>API Container</h3>
+<div id="container"></div>
+<button id="button">Display From Storage</button>
+<a href="views/chart.html"><button>Chart.js</button></a>
+<a href="views/input.html"><button>Input Form</button></a>
+</body>
+<!-- Insert this line above script imports  -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<!-- normal script imports etc  -->
+<script src="public/js/crypto.js"></script>
+<script>
+    $(document).ready(()=> {
+        $("#button").bind("click", ()=> {
+            dataStoreDisplay();
+        })
+    })
+</script>
+<!-- Insert this line after script imports -->
+<script>if (window.module) module = window.module;</script>
+</html>

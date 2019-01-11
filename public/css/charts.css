@@ -1,0 +1,18 @@
+* {
+    text-align: center;
+}
+#chart-container {
+    width: 100%;
+    height: 800px;
+    position: relative;
+}
+#loadCharts {
+    position: relative;
+}
+button {
+    display: inline-block;
+}
+table {
+    margin: auto;
+    display: table;
+}

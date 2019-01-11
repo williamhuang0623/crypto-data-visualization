@@ -1,0 +1,33 @@
+{
+  "name": "prsm-api",
+  "version": "0.0.0",
+  "private": true,
+  "main": "app.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "amd-loader": "0.0.8",
+    "bookshelf": "^0.13.3",
+    "browserify": "^16.0.0",
+    "chart.js": "^2.7.2",
+    "cookie-parser": "~1.4.3",
+    "cryptocompare": "^0.5.0",
+    "debug": "~2.6.9",
+    "electron-rebuild": "^1.7.3",
+    "express": "~4.16.0",
+    "http-errors": "~1.6.2",
+    "jquery": "^3.3.1",
+    "knex": "^0.14.6",
+    "node-fetch": "^2.1.2",
+    "node-gyp": "^3.6.2",
+    "npm": "^6.0.0",
+    "regression": "^2.0.1",
+    "sqlite3": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "electron": "2.0.2"
+  }
+}

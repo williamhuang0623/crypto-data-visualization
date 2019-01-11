@@ -1,0 +1,39 @@
+<!Doctype html>
+<html>
+<head>
+    <title>Chart.js</title>
+    <link href="../public/css/charts.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    <h1>PRSM</h1>
+    <div id="chart-container">
+        <canvas id="chart"></canvas>
+    </div>
+    <button id="loadCharts">Load Charts</button>
+    <a href="../index.html"><button>Call from Storage</button></a>
+</body>
+<!-- Insert this line above script imports  -->
+<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+
+<!-- normal script imports etc  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="../public/js/vendor.min.js"></script>
+
+<script src="../public/js/charts.js"></script>
+<!--
+<script src="../public/js/charts-v2.js"></script> -->
+<script>
+    $(document).ready(() => {
+
+        $('#loadCharts').click(() => {
+            loadDataset(displayDataset());
+        });
+
+        $("#chart").click(()=> {
+            //do nothing;
+        })
+    });
+    if (window.module) module = window.module;</script>
+
+</html>
+
